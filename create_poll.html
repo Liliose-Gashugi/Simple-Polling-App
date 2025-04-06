@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Poll</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Create a New Poll</h1>
+    </header>
+
+    <main>
+        <form id="createPollForm">
+            <label for="pollQuestion">Poll Question:</label>
+            <input type="text" id="pollQuestion" required>
+
+            <div id="optionsContainer">
+                <label>Options:</label>
+                <input type="text" class="pollOption" required>
+                <input type="text" class="pollOption" required>
+            </div>
+
+            <button type="button" id="addOption">Add Option</button>
+            <button type="submit" class="submit-vote">Create Poll</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Polling System</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
