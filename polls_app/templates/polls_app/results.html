@@ -1,0 +1,26 @@
+{% extends 'polls_app/base.html' %}
+
+{% block title %}Results: {{ question.question_text }}{% endblock %}
+
+{% block content %}
+<h1>{{ question.question_text }}</h1>
+
+<div class="list-group">
+    {% for choice in question.choice_set.all %}
+        <div class="list-group-item">
+            {{ choice.choice_text }}
+            <div class="progress mt-2">
+                <div class="progress-bar" role="progressbar" 
+                     style="width: {% widthratio choice.votes question.total_votes 100 %}%"
+                     aria-valuenow="{{ choice.votes }}" 
+                     aria-valuemin="0" 
+                     aria-valuemax="{{ question.total_votes }}">
+                    {{ choice.votes }} vote{{ choice.votes|pluralize }}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<a href="{% url 'polls_app:detail' question.id %}" class="btn btn-secondary mt-3">Vote again?</a>
+{% endblock %} 
