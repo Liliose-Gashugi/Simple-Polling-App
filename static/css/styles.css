@@ -1,0 +1,27 @@
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+h1 {
+    color: #333;
+}
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+input, button {
+    padding: 8px;
+    margin-top: 5px;
+    width: 100%;
+}
+.poll {
+    margin-bottom: 15px;
+}

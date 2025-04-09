@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Create Poll</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Create a New Poll</h1>
+      <form method="post">
+        {% csrf_token %}
+        <label>Question:</label><br />
+        <input type="text" name="question" required /><br /><br />
+        <label>Choice 1:</label><br />
+        <input type="text" name="choice1" required /><br />
+        <label>Choice 2:</label><br />
+        <input type="text" name="choice2" required /><br />
+        <label>Choice 3:</label><br />
+        <input type="text" name="choice3" /><br /><br />
+        <button type="submit">Create Poll</button>
+      </form>
+    </div>
+  </body>
+</html>
