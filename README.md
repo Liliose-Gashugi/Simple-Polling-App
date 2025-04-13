@@ -20,8 +20,8 @@ A web-based polling platform built with Django and Django REST Framework. Users 
 
 ## Installation
     # Prerequisites
-Python 3.x
-pip
+- Python 3.x
+- pip
 
 ---
 
